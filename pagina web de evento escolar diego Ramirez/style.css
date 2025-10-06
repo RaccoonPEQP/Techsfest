@@ -1,0 +1,275 @@
+/* =======================
+   RESET BÁSICO
+======================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #0a0f1f;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* =======================
+   HEADER & NAV
+======================= */
+header {
+  background: linear-gradient(90deg, #0a3d62, #1e90ff);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap; /* permite que los items bajen en pantallas pequeñas */
+}
+
+nav ul li {
+  margin: 5px 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffd32a;
+}
+
+.logo {
+  width: 90px; /* tamaño más grande en escritorio */
+  margin-right: 15px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .logo {
+    width: 70px;
+  }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+  .logo {
+    width: 60px;
+  }
+}
+/* =======================
+   SECCIONES GENERALES
+======================= */
+section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+h2 {
+  color: #1e90ff;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+h3 {
+  color: #ffd32a;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* =======================
+   HERO
+======================= */
+#hero {
+  background: url("image/tech-bg.jpg") no-repeat center/cover;
+  color: white;
+  padding: 80px 10%;
+  border-radius: 15px;
+}
+
+#hero button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #ffd32a;
+  color: #0a0f1f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#hero button:hover {
+  background: #ff9f1a;
+  transform: scale(1.05);
+}
+
+/* =======================
+   INFO
+======================= */
+#info {
+  background: #1b1f3a;
+  border-radius: 15px;
+  padding: 40px;
+  margin: 30px 0;
+}
+
+/* =======================
+   AGENDA
+======================= */
+.agenda {
+  background: #111528;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: left;
+  max-width: 700px;
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.3);
+}
+
+.agenda img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* =======================
+   PONENTES
+======================= */
+.ponentes {
+  display: inline-block;
+  width: 250px;
+  background: #111528;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.4);
+}
+
+.ponentes img {
+  width: 100%;
+  border-radius: 15px;
+  margin: 10px 0;
+}
+
+/* =======================
+   FORMULARIO CONTACTO
+======================= */
+#contacto {
+  background: #1b1f3a;
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+#contacto label {
+  display: block;
+  margin: 10px 0 5px;
+  text-align: left;
+}
+
+#contacto input,
+#contacto textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+#contacto button {
+  background: #1e90ff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#contacto button:hover {
+  background: #0a74da;
+  transform: scale(1.05);
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+  background: #0a0f1f;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  border-top: 2px solid #1e90ff;
+}
+
+footer .sociales a {
+  margin: 0 10px;
+  color: #1e90ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer .sociales a:hover {
+  color: #ffd32a;
+}
+
+/* =======================
+   RESPONSIVIDAD
+======================= */
+
+/* Tablets (pantallas menores a 992px) */
+@media (max-width: 992px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  section {
+    padding: 40px 5%;
+  }
+
+  .ponentes {
+    width: 45%;
+    margin: 10px auto;
+  }
+}
+
+/* Celulares (pantallas menores a 600px) */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.5em;
+  }
+
+  #hero {
+    padding: 60px 5%;
+  }
+
+  .ponentes {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    width: 40px;
+  }
+}
